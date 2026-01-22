@@ -1,12 +1,16 @@
 @import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 @font-face {
     font-family: "Neue Haas";
     src: url("./NeueHaasDisplayMediu.ttf")
 }
+
 @font-face {
-    font-family: 'sun-mediu'; /* This is the name you created */
-    src: url('fonts/sun-medium.woff2') format('woff2'), /* Path to your font file */
-         url('fonts/sun-medium.woff') format('woff');
+    font-family: 'sun-mediu';
+    /* This is the name you created */
+    src: url('fonts/sun-medium.woff2') format('woff2'),
+        /* Path to your font file */
+        url('fonts/sun-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -111,16 +115,18 @@ body {
     line-height: 8vw;
     text-align: right;
 }
-.king{
-   position: absolute;
+
+.king {
+    position: absolute;
     width: 46vw;
     height: 36vw;
     right: 0;
     top: 65vh;
-   
+
 }
-.king1{
-        position: absolute;
+
+.king1 {
+    position: absolute;
     height: 100%;
     width: 100%;
     background-color: #FE320A;
@@ -128,56 +134,68 @@ body {
     border-bottom-left-radius: 50%;
     filter: blur(20px);
 }
-.king2{
-        position: absolute;
-    height: 30vw;
-    width: 30vw;
-    border-radius: 50%;
-    background:linear-gradient(#FE320A,#fe570a);
-    filter: blur(20px);
-    animation-name:anime 2;
-    animation-duration:7s ;
-    animation-timing-function:linear ;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-.king3{
+
+.king2 {
     position: absolute;
     height: 30vw;
     width: 30vw;
-    background:linear-gradient(#FE320A,#fe570a);
     border-radius: 50%;
-    filter: blur(10px);
-    animation-name:anime1;
-    animation-duration:7s ;
-    animation-timing-function:linear ;
+    background: linear-gradient(#FE320A, #fe570a);
+    filter: blur(20px);
+    animation-name: anime 2;
+    animation-duration: 7s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-@keyframes anime1{
-    from{
-        transform: translate(55%,-3%);
+
+.king3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #fe570a);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation-name: anime1;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
     }
-    to{
-        transform: translate(0%,-10%);
+
+    to {
+        transform: translate(0%, -10%);
     }
 }
-@keyframes anime2{
-    from{
-        transform: translate(5%,-5%);
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
     }
-    to{
-        transform: translate(-20%,30%);
+
+    to {
+        transform: translate(-20%, 30%);
     }
 }
-.main video{
+
+.main video {
     position: relative;
     border-radius: 30px;
     margin-top: 4vw;
     width: 100%;
 
 }
-.moving-text{
+
+.two {
+    position: relative;
+}
+
+.moving-text {
     height: 40vh;
     min-width: 100vw;
     padding: 2px;
@@ -185,23 +203,27 @@ body {
     margin: 5vw 0;
     overflow-x: auto;
 }
-.moving-text::-webkit-scrollbar{
+
+.moving-text::-webkit-scrollbar {
     display: none;
 }
-.circle{
+
+.circle {
     height: 70px;
     width: 70px;
     background-color: #FE320A;
     border-radius: 50%;
     display: inline-block;
     margin: 1vw 2vw;
-    
+
 }
-.design{
+
+.design {
     font-size: 9vw;
     display: inline-block;
 }
-.con{
+
+.con {
     white-space: nowrap;
     display: inline-block;
     animation-name: move;
@@ -209,33 +231,47 @@ body {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-@keyframes move{
-from{ 
-    transform: translate3d(0%);
- }
-to{
-transform: translateX(-100%);
-}}
-.bottom{
+
+@keyframes move {
+    from {
+        transform: translate3d(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.bottom {
     margin-top: 7vw;
     min-height: 90vh;
     align-items: flex-start;
     display: flex;
     gap: 3vw;
+    margin-left: 50px;
 
 }
-.nana{
-font-size: 4.3vw;
+
+.nana {
+    font-size: 4.3vw;
+    z-index: 5;
+    position: relative;
 }
-.part1{
-    min-width:60vw;
+
+.part1 {
+    min-width: 60vw;
+    position: relative;
+    overflow: visible;
+    min-height: 80%;
 }
-.part2{
-    width:60vw;
+
+.part2 {
+    width: 60vw;
     height: 80vh;
     font-family: 'sun-mediu', sans-serif;
 }
-.img{
+
+.img {
     width: 60%;
     height: 40%;
     margin-left: 70px;
@@ -243,12 +279,79 @@ font-size: 4.3vw;
     margin-top: 180px;
     margin-bottom: 50px;
 }
-.meow{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 7%;
+
+.meow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7%;
 }
-.text{
+
+.text {
     margin-left: 70px;
+}
+
+.animation {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(to top right, #FE320A, #fe5b0a);
+    border-radius: 50%;
+    top: 54%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: ki;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes ki {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+.three {
+    min-height: 90vh;
+    width: 100vw;
+}
+
+.elements {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.lay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elements:hover .lay {
+    top: 0;
 }

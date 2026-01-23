@@ -323,19 +323,19 @@ body {
 .three {
     min-height: 90vh;
     width: 100vw;
+    padding: 4vw, 0;
 }
 
 .elements {
     height: 150px;
     width: 100%;
     position: relative;
-    border-top: 1px solid black;
     border-bottom: 1px solid black;
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding: 0 2vw;
 }
+
 h2 {
     font-size: 3vw;
     position: relative;
@@ -355,3 +355,57 @@ h2 {
 .elements:hover .lay {
     top: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.fourth {
+    height: 100vh;
+    width: 100%;
+    background-color: skyblue;
+}
+.wolves{
+    height: 80vh;
+    width: 80vw;
+    border-radius: 10%;
+    margin: 98px;
+    background-color: rgb(255, 132, 0);
+}
+
+.lefttt {
+    height: 100%;
+    width: 45%;
+    background-color: black;
+    border-radius: 10%;
+    color: #4D5356;
+    position: relative;
+    display: flex;
+}
+.boom1{
+    font-size: 5vw;
+    position: absolute;
+    left: 90px;
+    border-left: 2px solid #4D5356;
+}
+.boom2{
+    background-color: indigo;
+}
+span {
+    color: #003DF3;
+    padding-left: 20px;
+    display: block;
+}
+.shape{
+    font-size: 1vw;
+    border:none;
+    color: white;
+}
+

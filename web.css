@@ -1,46 +1,62 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 @font-face {
     font-family: "Neue Haas";
-    src: url("./NeueHaasDisplayMediu.ttf") 
+    src: url("./NeueHaasDisplayMediu.ttf")
 }
+
+@font-face {
+    font-family: 'sun-mediu';
+    /* This is the name you created */
+    src: url('fonts/sun-medium.woff2') format('woff2'),
+        /* Path to your font file */
+        url('fonts/sun-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: "Neue Haas";
+    background-color: #D8CBBA;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-.main{
-width: 100%;
-height: 100vh;
-background-color: bisque;
-position: relative;
-padding-left: 0 4vw;
+
+.main {
+    position: relative;
+    padding: 0 4vw;
+    overflow: auto;
 }
-.nav{
-    padding: 2vw 4vw;
+
+.nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
-.nav1{
-display: flex;
-justify-content: center;
-gap: 1vw;
-font-size: larger;
-color:black;
-gap: 30px;
-    margin-right: 35px;
+
+.nav1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    font-size: larger;
+    color: black;
+    gap: 30px;
+
 
 }
-.tags{
+
+.tags {
     border: 1px solid #8a8a8a89;
     overflow: hidden;
-border-radius: 50px;
-display: inline-flex;
+    border-radius: 50px;
+    display: inline-flex;
     color: #000000bb;
     align-items: center;
     justify-content: center;
@@ -50,10 +66,11 @@ display: inline-flex;
     position: relative;
     text-decoration: none;
     line-height: 1;
-     z-index: 1;
-     background: transparent;
+    z-index: 1;
+    background: transparent;
 }
-.tags::after{
+
+.tags::after {
     content: "";
     position: absolute;
     height: 100%;
@@ -64,23 +81,363 @@ display: inline-flex;
     transition: all ease 0.4s;
     z-index: -1;
 }
+
 .tags:hover::after {
     bottom: 0;
 }
+
 .tags:hover {
     color: #fff;
 }
-.center{
+
+.center {
+    width: 100%;
     height: 65vh;
-    background-color: cyan;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border-bottom: 1px solid 00;
-    padding: 0vw 4vw;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2vw;
 }
-.left h3{
+
+.left h3 {
     width: 30vw;
     font-size: 1.8vw;
     line-height: 2vw;
+}
+
+.right {
+    flex: 1;
+}
+
+.right h1 {
+    font-size: 9vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+.king {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 65vh;
+
+}
+
+.king1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+}
+
+.king2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(#FE320A, #fe570a);
+    filter: blur(20px);
+    animation-name: anime 2;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.king3 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #fe570a);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation-name: anime1;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, -10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+.main video {
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 100%;
+
+}
+
+.two {
+    position: relative;
+}
+
+.moving-text {
+    height: 40vh;
+    min-width: 100vw;
+    padding: 2px;
+    white-space: nowrap;
+    margin: 5vw 0;
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: #FE320A;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+
+}
+
+.design {
+    font-size: 9vw;
+    display: inline-block;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translate3d(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.bottom {
+    margin-top: 7vw;
+    min-height: 90vh;
+    align-items: flex-start;
+    display: flex;
+    gap: 3vw;
+    margin-left: 50px;
+
+}
+
+.nana {
+    font-size: 4.3vw;
+    z-index: 5;
+    position: relative;
+}
+
+.part1 {
+    min-width: 60vw;
+    position: relative;
+    overflow: visible;
+    min-height: 80%;
+}
+
+.part2 {
+    width: 60vw;
+    height: 80vh;
+    font-family: 'sun-mediu', sans-serif;
+}
+
+.img {
+    width: 60%;
+    height: 40%;
+    margin-left: 70px;
+    border-radius: 10%;
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
+
+.meow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7%;
+}
+
+.text {
+    margin-left: 70px;
+}
+
+.animation {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(to top right, #FE320A, #fe5b0a);
+    border-radius: 50%;
+    top: 54%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: ki;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes ki {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+.three {
+    min-height: 90vh;
+    width: 100vw;
+    padding: 4vw, 0;
+}
+
+.elements {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.lay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elements:hover .lay {
+    top: 0;
+}
+
+#fixed-img {
+    height: 30vw;
+    width: 25vw;
+    border-radius: 20px;
+    position: fixed;
+    background-color: aquamarine;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 100;
+    top: 27%;
+    left: 50%;
+    display: none;
+    pointer-events: none;
+}
+.fourth {
+    height: 100vh;
+    min-width: 100%;
+    background-color: #D8CBBA;
+}
+
+.wolves {
+    height: 100%;
+    width: 97%;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+}
+
+.page4-1 {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    padding: 0 4vw;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    margin-left: 40px;
+}
+
+.border {
+    border-left: 2px solid #494F52;
+}
+
+.page4-1 h1 {
+    color: #CDC1B1;
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+
+}
+
+.page4-1 p {
+    color: #98938C;
+    font-size: 1.1vw;
+    width: 80%;
+}
+
+.page4-2 {
+    height: 100%;
+    width: 55%;
+}
+
+.page4-1 h1 span {
+    color: #003AE7;
+    display: block;
+    padding-left: 30px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.fifth{
+    height: 100vh;
+    width: 100vw;
+
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    bottom: 0px;
 }

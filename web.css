@@ -434,7 +434,6 @@ h2 {
 .fifth {
     height: 70vh;
     min-width: 100%;
-    padding: 10vw 2vw;
 
 }
 
@@ -447,6 +446,9 @@ h2 {
     width: 30%;
     border-left: 1px solid #aeadad;
     padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
     

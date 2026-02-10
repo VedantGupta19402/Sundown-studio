@@ -26,10 +26,15 @@ elem.forEach((e) => {
 }
 
 function swiperAnimation() {
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: false,
-        spaceBetween: 30,
+   var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      centeredSlides: false,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      
     });
 }
 

@@ -432,8 +432,9 @@ h2 {
 }
    
 .fifth {
-    height: 70vh;
-    min-width: 100%;
+    height: 83vh;
+    min-width: 100vw;
+    padding: 10vw 0;
 
 }
 
@@ -443,16 +444,32 @@ h2 {
 }
 
 .swiper-slide {
-    width: 30%;
-    border-left: 1px solid #aeadad;
-    padding: 0 2vw;
+    width: 18%;
+    /* background-color: pink; */
+        padding-left: 2vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: left;
+    gap: 25px;
+    border-left: 1px solid rgba(163, 158, 151, 0.514);
 }
 
-    
-
-  
-
+.swiper-image{
+height: 40%;
+width: 45%;
+padding-top: 3vw;
+/* background-color: #003AE7; */
+}
+.para{
+text-decoration: none;
+text-align: left;
+text-indent: 0px;
+font-weight: 400;
+/* background-color: green; */
+font-size: 16.5px;
+color:#323739;
+width: 100%;
+height: 100%;
+}
+     
    

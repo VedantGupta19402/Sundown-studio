@@ -37,8 +37,16 @@ function swiperAnimation() {
       
     });
 }
+function loader(){
+   
+let loader=document.querySelector(".loader")
+setTimeout(()=>{
+loader.style.top="-105%"
+},4000)
+ 
+}
 
 swiperAnimation()
 page4Animation()
-
+loader()
 

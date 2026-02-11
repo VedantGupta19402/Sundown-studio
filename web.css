@@ -14,7 +14,52 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.loader{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 999999;
+    position: fixed;
+    top: 0px;
+    transition: all ease 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading{
+    font-size: 4.2vw;
+    background: linear-gradient(to right,orange,orangered);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+     animation: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+.loading:nth-child(2){
+    animation-delay: 2s;
+}
+.loading:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes load {
+    0%{
+opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+opacity: 0;
+    }
+}
 body {
     font-family: "Neue Haas";
     background-color: #D8CBBA;
@@ -471,5 +516,3 @@ color:#323739;
 width: 100%;
 height: 100%;
 }
-     
-   

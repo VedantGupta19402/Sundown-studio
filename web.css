@@ -1,4 +1,4 @@
-@import 'locomotive-scroll/dist/locomotive-scroll.css';
+/* @import 'locomotive-scroll/dist/locomotive-scroll.css'; */
 
 @font-face {
     font-family: "Neue Haas";
@@ -75,7 +75,6 @@ body {
 .main {
     position: relative;
     padding: 0 4vw;
-    overflow: auto;
 }
 
 .nav {

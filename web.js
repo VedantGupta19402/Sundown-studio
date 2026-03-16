@@ -1,52 +1,66 @@
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
+let scroll;
+window.addEventListener("load", () => {
+  scroll = new LocomotiveScroll({
+    el: document.querySelector('.main'),
+    smooth: true
+  });
+});
 
 
 function page4Animation() {
-   let ki = document.querySelector(".elements-container");
-let fix = document.querySelector("#fixed-img")
+
+let ki = document.querySelector(".elements-container");
+let fix = document.querySelector("#fixed-img");
+
+if(!ki) return;
+
 ki.addEventListener("mouseenter", () => {
     fix.style.display = "block";
-})
+});
 
 ki.addEventListener("mouseleave", () => {
     fix.style.display = "none";
-})
+});
 
 let elem = document.querySelectorAll(".elements");
+
 elem.forEach((e) => {
     e.addEventListener("mouseenter", () => {
-        let image = e.getAttribute("data-image")
-        fix.style.backgroundImage = `url(${image})`
-    })
-})
+        let image = e.getAttribute("data-image");
+        fix.style.backgroundImage = `url(${image})`;
+    });
+});
 
 }
+
 
 function swiperAnimation() {
-   var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      centeredSlides: false,
-      spaceBetween: 30,
-      pagination: {
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: false,
+    spaceBetween: 30,
+    pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
-      
-    });
+    },
+});
+
 }
 function loader(){
-   
-let loader=document.querySelector(".loader")
+
+let loader = document.querySelector(".loader");
+
 setTimeout(()=>{
-loader.style.top="-105%"
-},4000)
- 
+    loader.style.top = "-105%";
+
+    if(scroll){
+        scroll.update();
+    }
+
+},4000);
+
 }
-
-swiperAnimation()
-page4Animation()
-loader()
-
+swiperAnimation();
+page4Animation();
+loader();
